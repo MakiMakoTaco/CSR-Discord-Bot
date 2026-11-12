@@ -1,21 +1,22 @@
 {
-	"name": "celeste-skill-progress",
-	"version": "1.0.0",
-	"description": "Tracks the Celeste skill progress google sheet",
-	"main": "src/index.js",
+	"name": "CSR Discord Bot",
+	"description": "Discord integration for the CSR website",
+	"version": "2.0.0",
+	"type": "module",
+	"private": true,
+	"main": "dist/index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"dev": "commandkit dev",
+		"build": "commandkit build",
+		"start": "commandkit start"
 	},
-	"author": "Zelda",
-	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^24.19.2",
+		"typescript": "^5.9.3"
+	},
 	"dependencies": {
-		"celeste-skill-progress": "file:",
-		"commandkit": "^0.1.6",
-		"discord.js": "^14.18.0",
-		"dotenv": "^16.4.7",
-		"googleapis": "^144.0.0",
-		"he": "^1.2.0",
-		"mongoose": "^8.9.5",
-		"nodemon": "^3.1.0"
+		"commandkit": "^1.2.6",
+		"discord.js": "^14.28.1",
+		"postgres": "^4.1.1"
 	}
 }
