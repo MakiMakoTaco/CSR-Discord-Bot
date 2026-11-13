@@ -251,6 +251,7 @@ export const chatInput: ChatInputCommand = async (ctx) => {
 		.setTimestamp();
 
 	ctx.interaction.editReply({
+		content: '',
 		embeds: [playerQuickStatsEmbed],
 	});
 
