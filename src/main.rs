@@ -175,21 +175,19 @@ async fn random_mod(
     // #[autocomplete = "get_tiers"]
     // filter: Option<String>,
 ) -> Result<(), Error> {
-    ctx.defer_ephemeral().await?;
+    ctx.defer().await?;
 
     let discord_id = ctx.author().id.into();
     let pool = &ctx.data().pool;
     let player = get_player(pool, discord_id).await.unwrap();
-    println!("{:?}", player.id);
     let mods: Vec<Mod> = get_mods(pool, player).await?;
 
-    println!("{:?}", mods.len());
-
     let random_mod = &mods[rand::random_range(..mods.len())];
-
-    // println!("{:?}", random_mod[0].name);
-
-    let response = format!("Chosen mod is {}", random_mod.name);
+    let response = format!(
+        "Selected random mod is [{name}](https://celesteskillrating.net/mods/{id})",
+        name = random_mod.name,
+        id = random_mod.id
+    );
 
     ctx.say(response).await?;
     Ok(())
