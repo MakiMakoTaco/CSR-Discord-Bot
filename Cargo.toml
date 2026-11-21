@@ -1,0 +1,11 @@
+[package]
+name = "csr_discord_bot_v2"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dotenv = "0.15.0"
+poise = "0.7.1"
+rand = "0.10.4"
+sqlx = { version = "0.8.6", features = ["postgres", "runtime-tokio", "runtime-tokio-rustls"] }
+tokio = { version = "1.54.1", features = ["full"] }

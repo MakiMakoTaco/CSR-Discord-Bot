@@ -1,17 +1,2 @@
-# Secrets
+/target
 .env
-csrCredentials.json
-
-# Website stuff
-sql/
-sqlFiles/
-
-# node_modules
-node_modules
-
-# Logs
-*.log
-
-# Extra
-archived/
-ecosystem.config.js
